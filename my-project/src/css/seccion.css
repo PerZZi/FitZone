@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+
+:root {
+
+  --first-color: hsl(178, 72%, 55%);
+  --first-color-light: hsl(171, 97%, 77%);
+  --first-color-alt: hsl(160, 67%, 52%);
+  --first-color-dark: hsl(193, 63%, 50%);
+  --first-color-gray: hsl(79, 6%, 64%);
+  --title-color: hsl(180, 4%, 98%);
+  --title-color-black: hsl(180, 4%, 12%);
+  --text-color: hsl(180, 4%, 72%);
+  --text-color-light: hsl(180, 4%, 65%);
+  --body-color: hsl(180, 12%, 8%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Red Hat Display', sans-serif;
+  --second-font: 'Kaushan Script', cursive;
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.5rem;
+  --big-font-size: 1.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+
+  body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+  }
+
+  h1 {
+    font-family: var(--second-font);
+  }
+
+  h2 {
+    font-family: var(--body-font);
+    font-weight: var(--font-bold);
+  }
+
+  a {
+    text-decoration: none;
+    font-family: var(--second-font);
+  }
+
+}

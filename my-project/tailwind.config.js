@@ -7,15 +7,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        bodyColor : "#252422",
-        navColor : "#eb5e28",
-        letrasColor : "#FFDB01"
+        'first-color': 'hsl(178, 72%, 55%)',
+        'first-color-light': 'hsl(171, 97%, 77%)',
+        'first-color-alt': 'hsl(160, 67%, 52%)',
+        'first-color-dark': 'hsl(193, 63%, 50%)',
+        'first-color-gray': 'hsl(79, 6%, 64%)',
+        'title-color': 'hsl(180, 4%, 98%)',
+        'title-color-black': 'hsl(180, 4%, 12%)',
+        'text-color': 'hsl(180, 4%, 72%)',
+        'text-color-light': 'hsl(180, 4%, 65%)',
+        'body-color': 'hsl(180, 12%, 8%)',
       },
       fontFamily: {
-        primary: ['Bebas Neue', 'Sans-serif'],
-        secondary: ['Ubuntu', 'Sans-serif'],
-        text: ['Ubuntu', 'Sans-serif'],
-        accent: ['Ubuntu', 'Sans-serif'],
+        body: ['Red Hat Display', 'sans-serif'],
+        script: ['Kaushan Script', 'cursive'],
+      },
+      fontSize: {
+        'h2-font-size': '1.25rem', // El tamaño de fuente para h2
+      },
+      fontWeight: {
+        bold: 700, // Correspondiente al valor definido en CSS
+      },
+      letterSpacing: {
+        wide: '1.5px', // Espaciado entre letras
       },
     },
   },

@@ -1,25 +1,19 @@
 import { useState } from 'react'
-import Navbar from './componentes/Navbar'
-import Seccion from './componentes/Seccion'
-import Actividades from './componentes/Actividades'
+import { Routes, Route } from 'react-router-dom'
+import Inicio from './componentes/Inicio'
+import FormularioConsulta from './componentes/FormularioConsulta'
+import Programas from './componentes/Programas'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
-      
-      <header className='h-20 flex justify-around items-center text-primary uppercase font-primary'>
-        <h1 className='text-3xl text-white'>FitZone</h1>
-        <Navbar/>
-      </header>
-
-      <main>
-        <Seccion/>
-        <Actividades/>
-      </main>
-
-    </div>
+    <Routes>
+      <Route path='/' element={<Inicio />} />
+      <Route path='/Programs' element={<Programas/>} />
+      <Route path='/Contact' element={<FormularioConsulta/>} />
+      <Route exact path="/Contact" element={<FormularioConsulta/>}/>
+    </Routes>
   )
 }
 

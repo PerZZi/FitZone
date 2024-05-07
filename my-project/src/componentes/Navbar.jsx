@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
     return (
         <nav className="flex gap-4 text-white text-xl">
-            <a className="hover:text-letrasColor hover:underline decoration-solid" href="">Home</a>
-            <a className="hover:text-letrasColor hover:underline decoration-solid" href="">Programs</a>
-            <a className="hover:text-letrasColor hover:underline decoration-solid" href="">Contact</a>
+            <Link className="hover:text-first-color font-body text-base" to="/">Inicio</Link>
+            <Link className="hover:text-first-color font-body text-base" to="Programs">Programas</Link>
+            <Link className="hover:text-first-color font-body text-base" to="/Contact">Contactanos</Link>
         </nav>
     )
 }
