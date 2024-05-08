@@ -3,7 +3,7 @@ const Seccion = () => {
 
     return (
 
-        <section className="flex justify-between items-center">
+        <section className="flex flex-col items-center gap-20 lg:flex lg:flex-row lg:justify-between lg:items-center">
             <div className="w-1/2">
                 <img className="w-full" src="/src/imagenes/banner.png" alt="" />
             </div>

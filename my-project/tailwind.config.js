@@ -17,6 +17,7 @@ export default {
         'text-color': 'hsl(180, 4%, 72%)',
         'text-color-light': 'hsl(180, 4%, 65%)',
         'body-color': 'hsl(180, 12%, 8%)',
+        "body-color-2": "#0B0F0F"
       },
       fontFamily: {
         body: ['Red Hat Display', 'sans-serif'],
