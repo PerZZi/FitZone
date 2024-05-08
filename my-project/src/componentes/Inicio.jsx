@@ -9,7 +9,7 @@ const Inicio = () => {
 
         <div>
 
-            <header className='h-20 flex justify-around items-center text-primary uppercase font-primary shadow-lg sticky top-0'>
+            <header className='h-20 flex justify-around items-center text-primary uppercase font-primary shadow-lg sticky backdrop-blur-lg bg-opacity-50 top-0 z-20 border-b-2 border-first-color-alt'>
                 <h1 className='text-3xl text-white font-body font-bold'>FitZone</h1>
                 <Navbar />
             </header>

@@ -9,7 +9,7 @@ const Contacto = () => {
                 <h2 className="text-white text-4xl font-body font-bold">Logra tus objetivos</h2>
                 <p className="text-white text-xl text-center">Contamos con un staff preparado para asesorarte y darte un seguimiento de manera individualizada.</p>
                 <Link to="/Contact" className="bg-first-color-alt font-body font-bold text-white text-xl p-3 hover:bg-first-color">
-                    Consultas
+                    Dejanos tu consulta
                 </Link>
             </div>
 
