@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import { Link } from 'react-router-dom';
 
 const Programas = () => {
 
     const [searchName, setSearchName] = useState("");
     const [searchGenero, setSearchGenero] = useState("");
+    const [cart, setCart] = useState([]);
   
     const handleNameChange = (e) => {
       setSearchName(e.target.value);
@@ -13,6 +14,17 @@ const Programas = () => {
     const handleGeneroChange = (e) => {
       setSearchGenero(e.target.value);
     };
+
+    useEffect(() => {
+      const savedCart = localStorage.getItem('cart');
+      if (savedCart) {
+        setCart(JSON.parse(savedCart));
+      }
+    }, []);
+
+    useEffect(() => {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }, [cart]);
   
   
     const programasGimnasio = [
@@ -97,6 +109,13 @@ const Programas = () => {
       );
     });
 
+    const addToCart = (programa) => {
+      // Añadir al carrito si no está ya en él
+      if (!cart.find(item => item.nombre === programa.nombre)) {
+        setCart([...cart, programa]);
+      }
+    };
+
     return (
         <div className="text-primary uppercase font-primary shadow-lg sticky top-0">
             <h1 className='text-3xl text-white font-body font-bold'>FitZone</h1>
@@ -136,7 +155,7 @@ const Programas = () => {
                                     <li><strong>Hora:</strong> {programa.hora}</li>
                                     <li><strong>Tipo de Entrenamiento:</strong> {programa.tipoEntrenamiento}</li>
                                 </ul>
-                                <button className="bg-first-color-alt font-body text-white text-xl p-2 hover:bg-first-color">COMPRAR</button>
+                                <Link className="bg-first-color-alt font-body text-center text-white text-xl p-2 hover:bg-first-color" to="/Carrito" >COMPRAR</Link>
                             </div>
                         ))}
                     </div>

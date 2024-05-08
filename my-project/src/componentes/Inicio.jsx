@@ -25,10 +25,10 @@ const Inicio = () => {
             </main>
 
             <footer className='flex flex-col items-center mt-20 gap-10 shadow-lg lg:sticky backdrop-blur-lg bg-opacity-50 bottom-0 z-20 border-t-2 border-first-color-alt'>
-                <h3 className='text-3xl text-white text-center font-body font-bold uppercase'>Vení a probar la mejor experiencia en cualquiera de nuestras sedes</h3>
-                <div className='flex flex-col gap-20 lg:flex lg:flex-row lg:w-full lg:justify-around lg:gap-20'>
+                <h3 className='text-2xl text-white text-center font-body font-bold uppercase'>Vení a probar la mejor experiencia en cualquiera de nuestras sedes</h3>
+                <div className='flex flex-col gap-20 lg:flex lg:flex-row lg:w-full lg:justify-around lg:gap-10'>
 
-                    <div className='flex flex-col items-center gap-4 text-white font-body font-bold'>
+                    <div className='flex flex-col items-center gap-2 text-white font-body font-bold'>
                         <p>SEGUINOS EN</p>
                         <div className='flex items-center gap-2'>
                             <h3>instagram</h3>
@@ -40,7 +40,7 @@ const Inicio = () => {
                         </div>
                     </div>
 
-                    <div className='flex flex-col items-center gap-4 text-white font-body font-bold'>
+                    <div className='flex flex-col items-center gap-2 text-white font-body font-bold'>
                         <p>FitZone</p>
                         <p>Encontranos en:</p>
                         <p> Estrada 5986
