@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const Carrito = () => {
@@ -20,17 +21,39 @@ const Carrito = () => {
 
     // Eliminar un elemento del carrito
     const removeFromCart = (nombre) => {
-        const newCart = cart.filter((item) => item.nombre !== nombre);
-        setCart(newCart);
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "¿Deseas eliminar este artículo del carrito?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                const newCart = cart.filter((item) => item.nombre !== nombre);
+                setCart(newCart);
+                Swal.fire('Eliminado!', 'El artículo ha sido eliminado del carrito.', 'success');
+            }
+        });
     };
 
     // Calcular el precio total
     const total = cart.reduce((sum, item) => sum + item.precio, 0);
 
     const handlePurchase = () => {
-        alert(`Compra realizada con éxito. Total: ${total}`);
-        // Opcionalmente, limpiar el carrito después de la compra
-        setCart([]);
+        Swal.fire({
+            title: '¿Confirmar compra?',
+            text: `El total de la compra es ${total}.`,
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonText: 'Sí, comprar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire('Compra exitosa', `Tu compra se ha realizado con éxito. Total: ${total}`, 'success');
+                setCart([]);
+            }
+        });
       };
 
     return (

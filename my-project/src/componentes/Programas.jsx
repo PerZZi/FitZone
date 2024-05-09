@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart} from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 
 const Programas = () => {
 
@@ -114,9 +115,22 @@ const Programas = () => {
   const addToCart = (programa) => {
     // Añadir al carrito si no está ya en él
     if (!cart.find(item => item.nombre === programa.nombre)) {
-      alert(`Añadido al carro`);
+      Swal.fire({
+        title: 'Añadido al carrito',
+        text: `El programa "${programa.nombre}" se añadió al carrito.`,
+        icon: 'success',
+        confirmButtonText: 'OK',
+      });
       setCart([...cart, programa]);
       console.log(`Añadiendo al carrito: ${programa.nombre}`)
+    }
+    else {
+      Swal.fire({
+        title: 'Ya en el carrito',
+        text: `El programa "${programa.nombre}" ya está en el carrito.`,
+        icon: 'info',
+        confirmButtonText: 'OK',
+      });
     }
   };
 
